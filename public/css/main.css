@@ -1,0 +1,63 @@
+.noPadding{
+    padding:0rem;
+}
+.marginMenuFix{
+margin-top: -1rem;
+padding-top: 1.5em;
+}
+.tabs .indicator {
+    background-color: #c69727;
+}
+.tabs a.active { 
+    background-color: blue;
+}
+.shapes {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+.files {
+	display: flex;
+    flex-direction: column;
+}
+.materialTitle {
+	display: flex;
+    justify-content: flex-end;
+}
+.shape-blue {
+	width: 0;
+	height: 0;
+	border-right: 6rem solid transparent;
+    border-bottom: 12rem solid blue;
+    transform: scale(1, -1)
+}
+.shape-orange {
+	width: 0;
+	height: 0;
+	border-right: 6rem solid transparent;
+	border-top: 10rem solid orange;
+}
+.shape-purple {
+	width: 0;
+	height: 0;
+	border-right: 8rem solid transparent;
+    border-bottom: 12rem solid purple;
+    transform: scale(-1, 1)
+}
+.shape-green {
+	width: 0;
+	height: 0;
+	border-right: 8rem solid transparent;
+	border-top: 12rem solid green;
+}
+.grade {
+    font-size: 6em;
+}
+.addMargin {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+.alignDate{
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <link href="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+        </script>
+        <link rel="stylesheet"
+            href="/css/main.css"
+        >
+        <script src="/js/main.js"></script>
+    </head>
+    <body>
+            <nav class="nav-extended teal lighten-2">
+                    <div class="nav-wrapper">
+                      <a href="#">MBA em experiência ...</a>
+                      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                      <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="#">Menu 1</a></li>
+                            <li><a href="#">Menu 2</a></li>
+                            <li><a href="#">Menu 3</a></li>
+                      </ul>
+                    </div>
+                    <div class="nav-content">
+                      <ul class="tabs tabs-transparent">
+                        <li class="tab col s3"><a href="#test1" class="white-text">CALENDÁRIO</a></li>
+                        <li class="tab col s3"><a class="white-text" href="#test2">ELETIVAS</a></li>
+                        <li class="tab col s3"><a href="#test3" class="white-text">NOTAS E FALTAS</a></li>
+                        <li class="tab col s3"><a href="#test1" class="white-text">CALENDÁRIO</a></li>
+                        <li class="tab col s3"><a class="white-text" href="#test2">ELETIVAS</a></li>
+                        <li class="tab col s3"><a href="#test3" class="white-text">NOTAS E FALTAS</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                
+                  <ul class="sidenav" id="mobile-nav">
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                  </ul>
+
+        <div class="container addMargin">
+            <div class="row">
+                <%for(aula of aulas) {%>
+                    <div class="shapes">
+                        <div class="shape-blue">
+                            <div class="shape-orange">
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="teal-text grade"><%=aula.dia%></h1>
+                        </div>
+                        <div class="shape-purple">
+                            <div class="shape-green"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="alignDate">
+                            <div>
+                                <span class="black-text"><strong>Nome da aula</strong></span>
+                                <p> <%=aula.nome%> </p>
+                            </div>
+                            <div>
+                                <p> <%=aula.timestamp%> </p>
+                                <p> <%=aula.hora%> </p>
+                            </div>
+
+                        </div>
+                        <span class="black-text">
+                            <strong>
+                                Nome do módulo
+                            </strong>
+                        </span>
+                        <p><%=aula.modulo%></p>
+                        <hr>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header materialTitle">
+                                    <div><span>Material de aula</span><i class="material-icons">expand_more</i></div>
+                                </div>
+                                <div class="collapsible-body">
+                                    <label>Arquivos:</label>
+                                    <div class="files">
+                                        <% for (arquivo of aula.material) {%>
+                                            <a><%= arquivo.material %></a>
+                                        <% } %>        
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </body>
+</html>
