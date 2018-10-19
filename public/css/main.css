@@ -57,7 +57,49 @@ padding-top: 1.5em;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
-.alignDate{
+.flex-between{
 	display: flex;
 	justify-content: space-between;
 }
+.input-field.suffix i {
+	position: absolute;
+	width: 3rem;
+	font-size: 2rem;
+	transition: color .2s;
+	top: 0px;
+	right: 0px;
+  }
+  .input-field.suffix i.active {
+	color: #26a69a;
+  }
+  .userSent{
+	min-width: 4em;
+	background-color:green
+  }
+  .responseReceived{
+	min-width: 4em;
+	background-color: blue;
+  }
+  .flex-between-contact{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+  
+  .received{
+	margin-top: 1rem;
+	max-width:15rem;
+	word-break:break-all;
+	overflow:auto;
+	padding:.3rem;
+	border-radius: 3.125rem 3.125rem 3.125rem 0rem
+  }
+  .sent {
+	margin-top: 1rem;
+	max-width:15rem;
+	word-break:break-all;
+	margin-left:50%;
+	padding:.3rem;
+	overflow:auto;
+	border-radius: 3.125rem 3.125rem  0rem 3.125rem
+  }

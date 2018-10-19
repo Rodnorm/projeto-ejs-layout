@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="alignDate">
+                        <div class="flex-between">
                             <div>
                                 <span class="black-text"><strong>Nome da aula</strong></span>
                                 <p> <%=aula.nome%> </p>
@@ -96,6 +96,17 @@
                         </ul>
                     </div>
                 <%}%>
+            </div>
+
+            <div>
+                <div id="messageField" class="flex-between-contact">
+                    <div class="sent light-green darken-1 white-text">Professor ruim</div>
+                    <div class="received teal lighten-2 white-text">Olá, João, poderia nos detalhar melhor sobre sua situação?</div>
+                </div>
+                <div class="input-field suffix col s6">
+                    <input id="icon_prefix_input" type="text" placeholder="digite sua mensagem aqui">
+                    <i id="icon_prefix" class="material-icons">send</i>
+                </div>
             </div>
         </div>
     </body>
